@@ -1,0 +1,95 @@
+/* Логотип */ 
+.logo-main {
+    color: $logo-color;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+} 
+
+.logo-web {
+     color: $accent-color;
+    }
+
+    .header{
+        position: relative;
+        // background-color: tomato;
+            
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+        }
+    }
+
+@media screen and (min-width: 480px) {
+    .menu-btn{
+        background-color: transparent;
+        border: none;
+
+        &.is-open {
+            .icon-close{
+                display: block;
+            }
+            .icon-menu {
+                display: none;
+            }
+        }
+    }
+
+    .icon-close {
+        display: none;
+    }
+    .menu-wrapper {
+        display: none;
+        background-color: blueviolet;
+        position: absolute;
+        top: 100% ;
+        width: 100%;
+        right: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 140px;
+        padding-right: 140px;
+        text-align: center;
+
+        background: #FFFFFF;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        
+        
+            &.is-open {
+            display: block;
+        }
+    }
+
+    
+}
+
+// .header {
+//     line-height: normal;
+
+//         .container{
+//             display: flex;
+//             align-items: center;
+//         }
+// }
+
+// .logo-main {
+//     margin-right: 85px;
+//     padding-top: 25px;
+//     padding-bottom: 24px;
+
+//     color: $logo-color;
+//     font-family: $secondary-font;
+//     font-weight: 700;
+//     font-size: 26px;
+//     line-height: 1.2;
+// } 
+
+// .logo-web {
+//  color: $accent-color;
+// }

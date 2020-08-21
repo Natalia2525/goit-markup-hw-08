@@ -1,0 +1,121 @@
+/* Форма заказать услугу */
+ 
+.form-input:focus  {
+    border-color: $accent-color;
+ } 
+ 
+ .icon-person-black{
+    position: absolute;
+    top: 11px;
+    left: 16px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .form-input:focus ~ &,
+    .form-input:not(:placeholder-shown) ~ & {
+        fill: $accent-color;
+    }
+}
+
+.textarea-coment {
+    margin-bottom: 20px;
+    padding-top: 12px;
+    padding-left: 16px;
+    resize: none;
+    width: 448px;
+    height: 120px;
+}
+
+.modal-form-textarea-label {
+    position: absolute;
+    left: 16px;
+    top: 12px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        .textarea-coment:focus + &,
+        .textarea-coment:not(:placeholder-shown) + &{
+            transform: translate(2px,-32px);
+            color: $accent-color;
+            font-size: 12px;
+     }
+}
+
+
+ .form-input:focus +.modal-form-label,
+ .form-input:not(:placeholder-shown) +.modal-form-label {
+    transform: translate(-25px,-42px);
+    color: $accent-color;
+    font-size: 12px;
+}
+                 
+.form-submit-button {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.chekbox-input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.chekbox-text a {
+    color: $accent-color;
+}
+
+.modal-form-checkbox-label{
+    display: flex;
+    align-items: center;
+}
+
+.chekbox-input-custom{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    border-radius: 1px;
+    margin-right: 7px;
+
+    .chekbox-input:checked + & {
+        border-color: $accent-color;
+        background-color: $accent-color;
+        background-image: url('../images/form/icon-check.svg');
+        background-size: contain;
+        background-origin: border-box;
+    }
+}
+
+.form-close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            fill: $accent-color;
+            cursor: pointer;
+    }
+}
+
+.form-close-button
+.icon-close {
+    justify-content: center;
+    align-items: center;
+}
