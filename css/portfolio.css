@@ -312,6 +312,12 @@ body {
   height: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .button {
+    margin-bottom: 118px;
+  }
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;

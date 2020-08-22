@@ -1,35 +1,99 @@
 /*   СЕКЦИИ HERO*/
 
 .hero-section {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1600px;
-    height: 600px;
     background-color: grey;
     background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url('../images/hero/Hero_img.jpg');
+    url('../images/hero/header_mob.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 
     .container {
         text-align: center; 
     }
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-width: 320px) {
+  .hero-section {
+    background-image:linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)), 
+        url('../images/hero/header_mob@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px){
+    .hero-section {
+        background-image:linear-gradient(
+            rgba(47, 48, 58, 0.8),
+            rgba(47, 48, 58, 0.8)), 
+            url('../images/hero/header_tablet.jpg');
+      }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-width: 768px){
+  .hero-section {
+    background-image:linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)), 
+        url('../images/hero/header_tablet@2x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 1200px){
+    .hero-section {
+        background-image:linear-gradient(
+            rgba(47, 48, 58, 0.8),
+            rgba(47, 48, 58, 0.8)), 
+            url('../images/hero/header_desktop.jpg');
+      }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-width: 1200px){
+  .hero-section {
+    background-image:linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)), 
+        url('../images/hero/header_desktop@2x.jpg');
+  }
+}
+
 .hero {
     margin-bottom: 30px;
     padding-top: 200px;
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     color: $primary-white-color;
+    text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px){
+    .hero {
+        padding-top: 118px;
+        font-size: 26px;
+        line-height: 1.62;
+    }
+}
 
-
+@media screen and (min-width: 1200px){
+    .hero-section {
+            max-width: 1600px;
+            height: 600px;
+    }
+}
