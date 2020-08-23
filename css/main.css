@@ -630,7 +630,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   background-color: grey;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/header_mob.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(".../images/hero/header_mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -642,7 +642,7 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx), screen and (min-width: 320px) {
   .hero-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/header_mob@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(".../images/hero/header_mob@2x.jpg");
   }
 }
 
@@ -973,7 +973,7 @@ body {
 
 .team-list {
   margin-top: 50px;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
 }
 
 .team-list-card {
@@ -1039,17 +1039,32 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .team-list-card:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .team-list {
-    display: flex;
-    flex-wrap: wrap;
+    padding-bottom: 94px;
   }
+  .team-list-card {
+    width: calc((100% - 90px)/4);
+  }
+  .team-list-card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list-card {
     width: calc((100% - 30px)/2);
   }
@@ -1058,15 +1073,6 @@ body {
   }
   .team-list-card:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-list-card {
-    width: calc((100% - 90px)/4);
-  }
-  .team-list-card:not(:last-child) {
-    margin-right: 30px;
   }
 }
 
