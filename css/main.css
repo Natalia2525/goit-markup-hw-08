@@ -306,6 +306,12 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1199px) {
+  .title {
+    padding-top: 60px;
+  }
+}
+
 .button {
   margin-bottom: 200px;
   color: #ffffff;
@@ -388,37 +394,11 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input {
-  width: 448px;
-  height: 40px;
-  padding-left: 42px;
-}
-
-.form-input:focus {
-  outline: none;
-}
-
-.textarea-coment:focus {
-  outline: none;
-}
-
-.modal-title {
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.modal-form-wrapper {
-  position: relative;
-  margin-bottom: 28px;
-}
-
-.modal-form-textarea-wrapper {
-  position: relative;
+@media screen and (max-width: 1199px) {
+  .modal-form {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 /* Логотип */
@@ -647,6 +627,8 @@ body {
 
 /*   СЕКЦИИ HERO*/
 .hero-section {
+  margin-right: auto;
+  margin-left: auto;
   background-color: grey;
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/header_mob.jpg");
   background-repeat: no-repeat;
@@ -716,6 +698,39 @@ body {
 }
 
 /* Форма заказать услугу */
+.form-input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.textarea-coment:focus {
+  outline: none;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.modal-form-wrapper {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.modal-form-textarea-wrapper {
+  position: relative;
+}
+
 .form-input:focus {
   border-color: #2196F3;
 }
@@ -830,17 +845,38 @@ body {
   align-items: center;
 }
 
-/*   СЕКЦИЯ about_us */
-.about-us-list {
-  display: flex;
-  padding-top: 94px;
+@media screen and (max-width: 1199px) {
+  .form-input {
+    width: 370px;
+    height: 40px;
+  }
+  .textarea-coment {
+    width: 370px;
+    height: 120px;
+  }
 }
 
-.about-us-list-item:not(:last-child) {
-  margin-right: 30px;
+/*   СЕКЦИЯ about_us */
+.about-us {
+  padding-top: 60px;
+}
+
+.about-us-title {
+  margin-top: 30px;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-text {
+  margin-top: 10px;
+  line-height: 1.71;
+  color: #757575;
 }
 
 .about-us-img {
+  text-align: center;
   padding-top: 25px;
   padding-right: 100px;
   padding-bottom: 25px;
@@ -849,16 +885,44 @@ body {
   background-color: #F5F4FA;
 }
 
-.about-us-title {
-  margin-top: 30px;
-  color: #212121;
-  font-weight: 700;
+@media screen and (max-width: 767px) {
+  .about-us {
+    padding-bottom: 60px;
+  }
+  .about-us-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .about-us-title {
+    text-align: center;
+  }
 }
 
-.about-us-text {
-  margin-top: 10px;
-  line-height: 1.71;
-  color: #757575;
+@media screen and (min-width: 768px) {
+  .about-us {
+    padding-bottom: 60px;
+  }
+  .about-us-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us-list-item {
+    width: calc((100% - 30px)/2);
+  }
+  .about-us-list-item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-us {
+    padding-top: 94px;
+  }
+  .about-us-list-item {
+    width: calc((100% - 90px)/4);
+  }
+  .about-us-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /*  СЕКЦИЯ ЧЕМ МЫ ЗАНИМАЕМСЯ work*/
@@ -896,18 +960,23 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
+
 /*  Наша команда  */
 .team {
   background: #F5F4FA;
 }
 
 .team-list {
-  display: flex;
   margin-top: 50px;
   padding-bottom: 94px;
 }
 
-.team-list li {
+.team-list-card {
   background-color: #ffffff;
 }
 
@@ -953,12 +1022,9 @@ body {
   fill: #ffffff;
 }
 
-.team-list-card:not(:last-child) {
-  margin-right: 30px;
-}
-
 .team-list-header {
   margin-top: 30px;
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -971,6 +1037,37 @@ body {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-list-card {
+    width: calc((100% - 30px)/2);
+  }
+  .team-list-card:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+  .team-list-card:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list-card {
+    width: calc((100% - 90px)/4);
+  }
+  .team-list-card:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /*  Постоянные клиенты */

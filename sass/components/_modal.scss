@@ -41,37 +41,14 @@
   }
 }
 
-.form-input {
-    width: 448px;
-    height: 40px;
-    padding-left: 42px;
-
-    &:focus {
-      outline: none;
-    }
-}
-
-.textarea-coment:focus{
-    outline: none;
-}
-
-  .modal-title {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $title-text-color;
- }
-
-.modal-form-wrapper {
-    position: relative;
-    margin-bottom: 28px;
-}
-
-.modal-form-textarea-wrapper{
-    position: relative;
+@media screen and (max-width: 1199px){
+  .modal-form {
+  
+    width: 450px;
+    height: 609px;
   }
+}
+
+
 
 
