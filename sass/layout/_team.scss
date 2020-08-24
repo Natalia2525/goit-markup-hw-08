@@ -30,7 +30,6 @@
     }
 }
 
-
 .social-list-item {
     display: flex;
     justify-content: center;
@@ -74,18 +73,11 @@
     text-align: center;
 }
 
-
-
-
-
-
-
-
 @media screen and (min-width: 768px){
     .team-list {
         display: flex;
         flex-wrap: wrap;
-}
+    }
 }
 
 

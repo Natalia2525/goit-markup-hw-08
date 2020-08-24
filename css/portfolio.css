@@ -679,11 +679,6 @@ body {
   background-color: #2F303A;
 }
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
 .logo-footer {
   padding-top: 60px;
   color: #000000;
@@ -699,7 +694,6 @@ body {
 
 .address-list {
   margin-top: 20px;
-  margin-right: 69px;
   padding-bottom: 60px;
 }
 
@@ -722,6 +716,7 @@ body {
 .subtitle {
   color: #ffffff;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .social-list-item-svg-footer {
@@ -731,7 +726,6 @@ body {
 .footer-social-list {
   display: flex;
   margin-top: 20px;
-  margin-right: 94px;
 }
 
 .footer-social-list li:not(:last-child) {
@@ -754,8 +748,9 @@ body {
 }
 
 .email {
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -766,6 +761,7 @@ body {
 
 .email::placeholder {
   padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .button-title {
@@ -780,9 +776,85 @@ body {
 .send-email {
   display: flex;
   margin-top: 20px;
+  width: 100%;
 }
 
 .send-email-svg {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .container {
+    text-align: center;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .send-email {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-footer {
+    font-size: 24px;
+  }
+  .footer-social {
+    margin-bottom: 60px;
+  }
+  .footer-social-list {
+    justify-content: center;
+  }
+  .mail-container {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .address-container {
+    flex-basis: 50%;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    justify-content: center;
+  }
+  .mail-container {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-list {
+    margin-right: 69px;
+  }
+  .footer-social-list {
+    margin-right: 94px;
+  }
+  .mail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .email {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */
