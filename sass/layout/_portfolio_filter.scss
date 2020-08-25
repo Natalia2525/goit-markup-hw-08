@@ -3,17 +3,14 @@
 
 .filter-list {
     display: flex;
-    padding-top: 94px;
-    justify-content: center;
 
     & li:not(:last-child) {
-        margin-right: 9px;
+        margin-right: 8px;
     }
 }
 
 .btn {
-    width: 128px;
-    height: 38px;
+    padding: 6px 22px;
     color: $title-text-color;
     border-color: transparent;
     font-weight: 500;
@@ -31,3 +28,19 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .filter-list {
+        flex-wrap: wrap;
+       
+        & li:not(:nth-last-child(-n+2)) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .filter-list {
+        justify-content: center;
+    }
+}

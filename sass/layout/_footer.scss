@@ -124,7 +124,7 @@
     .send-email {
         flex-direction: column;
         align-items: center;   
- }
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -135,10 +135,10 @@
 
     .footer-social {
         margin-bottom: 60px;
-    }
 
-    .footer-social-list{
-        justify-content: center;
+        &-list{
+            justify-content: center;
+        }
     }
 
     .mail-container {
@@ -182,9 +182,7 @@
         align-items: center;
         flex-direction: column;
     }
-
 }
-
 
 
 @media screen and (min-width: 1200px){

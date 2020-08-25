@@ -428,8 +428,8 @@ body {
     padding-bottom: 16px;
   }
   .menu-wrapper {
-    background-color: blueviolet;
     position: absolute;
+    z-index: 1;
     top: 100%;
     width: 100%;
     right: 0;

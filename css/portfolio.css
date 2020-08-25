@@ -369,8 +369,8 @@ body {
     padding-bottom: 16px;
   }
   .menu-wrapper {
-    background-color: blueviolet;
     position: absolute;
+    z-index: 1;
     top: 100%;
     width: 100%;
     right: 0;
@@ -570,17 +570,14 @@ body {
 /*  Фильтр */
 .filter-list {
   display: flex;
-  padding-top: 94px;
-  justify-content: center;
 }
 
 .filter-list li:not(:last-child) {
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 .btn {
-  width: 128px;
-  height: 38px;
+  padding: 6px 22px;
   color: #212121;
   border-color: transparent;
   font-weight: 500;
@@ -595,6 +592,21 @@ body {
 
 .btn:hover, .btn:focus {
   background: #2196F3;
+}
+
+@media screen and (max-width: 767px) {
+  .filter-list {
+    flex-wrap: wrap;
+  }
+  .filter-list li:not(:nth-last-child(-n+2)) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+  }
 }
 
 /*  Список Примеры */
@@ -645,7 +657,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  padding-bottom: 94px;
 }
 
 .portfolio-title {
@@ -657,21 +668,66 @@ body {
 }
 
 .portfolio-list {
-  width: 370px;
-}
-
-.portfolio-list:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.portfolio-list:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  width: 100%;
 }
 
 .portfolio-list .text {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
+}
+
+@media screen and (max-width: 1199px) {
+  .portfolio {
+    justify-content: center;
+  }
+  .portfolio-section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-list:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-list:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    width: calc(50% - 30px);
+  }
+  .portfolio-list:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .portfolio-list:last-child {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    justify-content: center;
+  }
+  .portfolio-section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+  .portfolio-list {
+    width: calc((100% - 60px)/3);
+  }
+  .portfolio-list:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .portfolio-list:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
 }
 
 /* Футер */

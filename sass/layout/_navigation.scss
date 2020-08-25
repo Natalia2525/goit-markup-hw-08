@@ -64,13 +64,13 @@
             padding-top: 32px;
             padding-bottom: 32px;
         }
-    }
 
-    .site-nav-list {
+        &-list {
 
-        &:not(:last-child) {
-            margin-right: 50px;
-        }  
+            &:not(:last-child) {
+                margin-right: 50px;
+            }  
+        }
     }
 }
 
@@ -79,27 +79,3 @@
         margin-right: 305px;
     }
 }
-
-
-
-
-
-
-// .site-nav-list:not(:last-child) {
-//     margin-right: 50px;
-// }
-
-// .site-nav-link {
-//     position: relative;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: $title-text-color;
-//     font-weight: 500;
-//     letter-spacing: 0.02em;
-
-//         &:hover,
-//         &:focus {
-//             color: $accent-color;
-//      }
-// }
